@@ -1,0 +1,121 @@
+.main-cards {
+  height: 83rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-cards {
+  height: 27%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.single-card {
+  width: 30%;
+  height: 100%;
+  background: white;
+  box-shadow: 0 0.47rem 1.19rem rgba(4, 9, 20, 0.3);
+}
+
+.card-container {
+  height: 90%;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.card-container h3 {
+  text-align: center;
+}
+
+.icon-text {
+  width: 70%;
+  height: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  text-align: center;
+}
+
+.details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 33px;
+}
+
+.graph-card {
+  height: 37%;
+  padding-top: 1px;
+}
+
+.main-graph {
+  height: 100%;
+  background: white;
+  box-shadow: 0 0.47rem 1.19rem rgba(4, 9, 20, 0.3);
+}
+
+.mixed-chart {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.trips-card {
+  background: white;
+  height: 28%;
+  overflow: scroll;
+  overflow-x: hidden;
+  box-shadow: 0 0.47rem 1.19rem rgba(4, 9, 20, 0.3);
+}
+
+.trips-card p {
+  padding: 20px 40px;
+  font-size: 14px;
+  font-weight: 700;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.trips-card table {
+  text-align: center;
+  font-size: 16px;
+  border-collapse: collapse;
+  width: 95%;
+  padding: 5px;
+  margin: 20px auto;
+  border-radius: 4px;
+  font-style: italic;
+  display: table;
+}
+
+.trips-card thead th {
+  background: #094a89;
+  color: white;
+  padding: 20px 10px;
+  font-weight: lighter !important;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 10%;
+}
+
+.trips-card tbody td {
+  padding: 20px 10px;
+  font-weight: lighter !important;
+  text-align: center;
+  width: 5%;
+}
+
+.trips-card tbody td a {
+  background: #094a89;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  box-shadow: 0 0 4px #ccc;
+}

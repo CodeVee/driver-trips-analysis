@@ -1,0 +1,15 @@
+.homepage {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  height: 98%;
+  width: 80%;
+  margin: 1rem auto;
+  background: #f9f9f9;
+  height: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+}

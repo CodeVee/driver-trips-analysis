@@ -1,0 +1,47 @@
+import React, { useState } from 'react';
+import Chart from 'react-apexcharts';
+
+const RightChart = ({ values }) => {
+  const [options] = useState({
+    chart: {
+      id: 'basic-bar',
+    },
+    xaxis: {
+      categories: ['Cash', 'Card', 'Total'],
+    },
+    fill: {
+      colors: ['#094a89'],
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    title: {
+      text: 'Type of Payment Used',
+      align: 'center',
+      margin: 20,
+      offsetY: 20,
+      style: {
+        fontSize: '15px',
+      },
+    },
+  });
+
+  const [series] = useState([
+    {
+      name: 'series-1',
+      data: values,
+    },
+  ]);
+
+  return (
+    <div className="app">
+      <div className="row">
+        <div className="mixed-chart">
+          <Chart options={options} series={series} type="bar" width="750" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RightChart;
