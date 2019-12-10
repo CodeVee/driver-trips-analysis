@@ -4,10 +4,8 @@ import cors from 'cors';
 import compression from 'compression';
 import path from 'path';
 import morgan from 'morgan';
-import graphQLHTTP from 'express-graphql';
 
 import apiRouter from './routes/index';
-import schema from './schema';
 
 const app = express();
 
@@ -38,14 +36,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use(
-  '/graphql',
-  graphQLHTTP({
-    schema,
-    graphiql: true,
-  }),
-);
 
 app.use('/api', apiRouter);
 app.use(express.static(path.join(__dirname, '../', 'client/build')));
