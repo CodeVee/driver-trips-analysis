@@ -137,4 +137,8 @@
   .icon-text {
     width: 100%;
   }
+
+  .details {
+    padding-left: 60px;
+  }
 }
