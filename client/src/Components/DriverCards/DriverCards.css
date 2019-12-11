@@ -119,3 +119,6 @@
   font-size: 10px;
   box-shadow: 0 0 4px #ccc;
 }
+
+@media only screen and (max-width: 600px) {
+}
