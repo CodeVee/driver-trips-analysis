@@ -133,4 +133,8 @@
     width: 95%;
     margin: 10px auto;
   }
+
+  .icon-text {
+    width: 100%;
+  }
 }
