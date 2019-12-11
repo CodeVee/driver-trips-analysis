@@ -124,4 +124,8 @@
   .main-cards {
     height: fit-content;
   }
+
+  .top-cards {
+    flex-direction: column;
+  }
 }
