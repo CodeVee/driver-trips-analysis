@@ -128,4 +128,9 @@
   .top-cards {
     flex-direction: column;
   }
+
+  .single-card {
+    width: 95%;
+    margin: 10px auto;
+  }
 }
