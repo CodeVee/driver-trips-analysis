@@ -28,7 +28,7 @@ const RightChart = ({ values }) => {
 
   const [series] = useState([
     {
-      name: 'series-1',
+      name: 'Mode Of Payment',
       data: values,
     },
   ]);
