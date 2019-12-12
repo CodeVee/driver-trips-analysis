@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Chart from 'react-apexcharts';
 
-const RightChart = ({ values }) => {
+const MainChart = ({ values }) => {
   const [options] = useState({
     chart: {
       id: 'basic-bar',
@@ -44,4 +44,4 @@ const RightChart = ({ values }) => {
   );
 };
 
-export default RightChart;
+export default MainChart;
