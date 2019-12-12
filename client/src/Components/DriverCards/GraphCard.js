@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import RightChart from '../Charts/RightChart';
+import RightChart from '../Charts/MainChart';
 
 const GraphCard = () => {
   const [stats, setStats] = useState({});
