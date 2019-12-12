@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import RightChart from '../Charts/MainChart';
+import MainChart from '../Charts/MainChart';
 
 const GraphCard = () => {
   const [stats, setStats] = useState({});
@@ -24,7 +24,7 @@ const GraphCard = () => {
     <Fragment>
       <section className="graph-card">
         <div className="main-graph">
-          {length !== 0 && <RightChart values={values} />}
+          {length !== 0 && <MainChart values={values} />}
         </div>
       </section>
     </Fragment>
