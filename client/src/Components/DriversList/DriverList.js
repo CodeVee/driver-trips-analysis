@@ -19,15 +19,11 @@ const DriverList = ({ data }) => {
         <p className="list-head">Drivers</p>
         {length &&
           drivers.map(driver => {
-            if (data.driverID === driver.driverID) {
-              return (
-                <Single driver={driver} key={driver.driverID} current={true} />
-              );
-            } else {
-              return (
-                <Single driver={driver} key={driver.driverID} current={false} />
-              );
-            }
+            return data.driverID === driver.driverID ? (
+              <Single driver={driver} key={driver.driverID} current={true} />
+            ) : (
+              <Single driver={driver} key={driver.driverID} current={false} />
+            );
           })}
       </div>
     </Fragment>
