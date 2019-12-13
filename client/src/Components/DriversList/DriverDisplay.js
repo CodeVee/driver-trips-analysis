@@ -6,7 +6,7 @@ const DriverDisplay = ({ driver }) => {
   const [vehicles, setVehicles] = useState('');
   useEffect(() => {
     if (driver) {
-      const getV = async () => {
+      const getVehicle = async () => {
         const arr = driver.vehicleID.map(vehicle => {
           return fetch(`/api/vehicle/${vehicle}`)
             .then(data => data.json())
@@ -16,7 +16,7 @@ const DriverDisplay = ({ driver }) => {
         setVehicles('');
         setVehicles(resolvedArr);
       };
-      getV();
+      getVehicle();
     }
   }, [driver]);
 
