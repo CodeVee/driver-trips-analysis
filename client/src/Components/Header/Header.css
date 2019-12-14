@@ -25,3 +25,20 @@
   color: #fff;
   font-weight: 700;
 }
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    height: 5rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .nav .nav-links {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 0.9rem;
+  }
+
+  .nav .nav-links li {
+  }
+}
