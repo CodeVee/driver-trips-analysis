@@ -1,14 +1,9 @@
 .header {
   height: 3rem;
-  display: flex;
   background: #094a89;
   color: white;
   align-items: center;
   margin-bottom: 2.0286rem;
-}
-
-.logo {
-  flex: 0 0 10%;
 }
 
 .nav {
