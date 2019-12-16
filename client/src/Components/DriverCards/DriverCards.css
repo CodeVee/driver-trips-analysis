@@ -145,4 +145,8 @@
   .trips-card {
     height: 400px;
   }
+
+  .trips-card table {
+    font-size: 7px;
+  }
 }
