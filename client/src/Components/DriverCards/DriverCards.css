@@ -141,4 +141,8 @@
   .details {
     padding-left: 60px;
   }
+
+  .trips-card {
+    height: 400px;
+  }
 }
