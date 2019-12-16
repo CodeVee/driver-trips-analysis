@@ -152,12 +152,7 @@
   }
 
   .trips-card tbody td a {
-    background: #094a89;
     padding: 5px 10px;
-    border-radius: 10px;
-    color: #fff;
-    text-decoration: none;
     font-size: 7px;
-    box-shadow: 0 0 4px #ccc;
   }
 }
