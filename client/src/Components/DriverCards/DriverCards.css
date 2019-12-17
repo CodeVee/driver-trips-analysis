@@ -143,6 +143,10 @@
     font-size: 20px;
   }
 
+  .details p {
+    padding: 3px 0;
+  }
+
   .trips-card {
     height: 400px;
     margin: 20px auto;
