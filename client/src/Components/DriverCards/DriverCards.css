@@ -144,8 +144,7 @@
 
   .trips-card {
     height: 400px;
-    margin-top: 20px;
-    margin-left: auto;
+    margin: 20px auto;
   }
 
   .trips-card table {
