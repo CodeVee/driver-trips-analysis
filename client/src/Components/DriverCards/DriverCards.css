@@ -140,6 +140,10 @@
     margin-top: 15px;
   }
 
+  .icon {
+    flex: 0 0 30%;
+  }
+
   .details {
     padding-left: 100px;
     font-size: 20px;
