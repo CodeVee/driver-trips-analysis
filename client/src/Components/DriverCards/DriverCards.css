@@ -137,6 +137,7 @@
   .icon-text {
     width: 100%;
     flex-direction: row;
+    margin-top: 15px;
   }
 
   .details {
