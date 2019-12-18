@@ -7,8 +7,8 @@ import Card from '../resources/icons8_card_payment_16px.png';
 import Car from '../resources/icons8_car_16px.png';
 
 const SingleCard = ({ index, user }) => {
-  const text1 = 'Top Earner';
   const text0 = 'Top Driver';
+  const text1 = 'Top Earner';
 
   const { name, cash, card, trip, amount } = user;
 
