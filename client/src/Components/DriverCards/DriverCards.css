@@ -169,6 +169,10 @@
     display: none;
   }
 
+  .mobile-chart {
+    display: contents;
+  }
+
   .trips-card {
     height: 400px;
     margin: 20px auto;
