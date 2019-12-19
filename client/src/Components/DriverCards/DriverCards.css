@@ -161,6 +161,10 @@
     padding: 3px 0;
   }
 
+  .mixed-chart {
+    width: 100%;
+  }
+
   .trips-card {
     height: 400px;
     margin: 20px auto;
