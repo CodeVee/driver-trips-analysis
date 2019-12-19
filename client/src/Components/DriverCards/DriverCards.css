@@ -65,6 +65,10 @@
   margin: 0 auto;
 }
 
+.mobile-chart {
+  display: none;
+}
+
 .trips-card {
   background: white;
   height: 28%;
