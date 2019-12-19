@@ -44,7 +44,13 @@ const MainChart = ({ values }) => {
             type="bar"
             width="750"
           />
-          <Chart options={options} series={series} type="bar" width="300" />
+          <Chart
+            className="mobile-chart"
+            options={options}
+            series={series}
+            type="bar"
+            width="300"
+          />
         </div>
       </div>
     </div>
