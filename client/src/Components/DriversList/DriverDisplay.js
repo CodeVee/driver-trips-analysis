@@ -19,6 +19,8 @@ const DriverDisplay = ({ driver }) => {
       getVehicle();
     }
   }, [driver]);
+
+  return driver && vehicles;
 };
 
 export default DriverDisplay;
