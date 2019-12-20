@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './Tripspage.css';
 
-const Tripspage = ({ match: { params } }) => {
+const Tripspage = ({ match }) => {
   const [trip, setTrip] = useState([]);
 
+  const { params } = match;
   useEffect(() => {
     if (params.tripID) {
       fetch(`/api/trip/${params.tripID}`)
