@@ -29,15 +29,6 @@ const DriverDisplay = ({ driver }) => {
         </div>
       </Fragment>
     );
-  } else {
-    return (
-      <Fragment>
-        <div className="driver-display">
-          <DriverInfo />
-          <VehicleDetail />
-        </div>
-      </Fragment>
-    );
   }
 };
 
