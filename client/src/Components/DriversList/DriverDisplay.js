@@ -19,17 +19,6 @@ const DriverDisplay = ({ driver }) => {
       getVehicle();
     }
   }, [driver]);
-
-  if (driver && vehicles) {
-    return (
-      <Fragment>
-        <div className="driver-display">
-          <DriverInfo info={driver} />
-          <VehicleDetail vehicles={vehicles} />
-        </div>
-      </Fragment>
-    );
-  }
 };
 
 export default DriverDisplay;
