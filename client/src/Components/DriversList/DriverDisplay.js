@@ -20,7 +20,21 @@ const DriverDisplay = ({ driver }) => {
     }
   }, [driver]);
 
-  return driver && vehicles;
+  return driver && vehicles ? (
+    <Fragment>
+      <div className="driver-display">
+        <DriverInfo info={driver} />
+        <VehicleDetail vehicles={vehicles} />
+      </div>
+    </Fragment>
+  ) : (
+    <Fragment>
+      <div className="driver-display">
+        <DriverInfo />
+        <VehicleDetail />
+      </div>
+    </Fragment>
+  );
 };
 
 export default DriverDisplay;
