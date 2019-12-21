@@ -38,7 +38,7 @@ const Tripspage = ({ match }) => {
         {lenTrip ? trip[0].destination.address : ''}
       </p>
       <p>
-        Payment:{' '}
+        <span>Payment: </span>
         {lenTrip ? (trip[0].isCash ? 'Card Payment' : 'Cash Payment') : ''}
       </p>
       <p>Date: {lenTrip ? trip[0].created.slice(0, 10) : ''}</p>
