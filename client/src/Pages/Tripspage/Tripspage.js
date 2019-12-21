@@ -33,7 +33,10 @@ const Tripspage = ({ match }) => {
         <span>PickUp: </span>
         {lenTrip ? trip[0].pickup.address : ''}
       </p>
-      <p>DropOff: {lenTrip ? trip[0].destination.address : ''}</p>
+      <p>
+        <span>DropOff: </span>
+        {lenTrip ? trip[0].destination.address : ''}
+      </p>
       <p>
         Payment:{' '}
         {lenTrip ? (trip[0].isCash ? 'Card Payment' : 'Cash Payment') : ''}
