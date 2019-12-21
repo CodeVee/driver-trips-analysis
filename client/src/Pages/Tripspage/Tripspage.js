@@ -18,7 +18,10 @@ const Tripspage = ({ match }) => {
   return (
     <div className="trips-table">
       <p>TRIP DETAILS</p>
-      <p>Driver: {params.driverName}</p>
+      <p>
+        <span>Driver: </span>
+        {params.driverName}
+      </p>
       <p>Passenger: {lenTrip ? trip[0].user.name : ''}</p>
       <p>Amount: &#8358; {lenTrip ? trip[0].billedAmount : ''}</p>
       <p>PickUp: {lenTrip ? trip[0].pickup.address : ''}</p>
