@@ -36,7 +36,7 @@ const Tripspage = ({ match }) => {
       </p>
       <p>
         <span>DropOff: </span>
-        {lenTrip ? trip[0].destination.address : ''}
+        <span>{lenTrip ? trip[0].destination.address : ''}</span>
       </p>
       <p>
         <span>Payment: </span>
