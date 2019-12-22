@@ -20,7 +20,7 @@ const Tripspage = ({ match }) => {
       <p>TRIP DETAILS</p>
       <p>
         <span>Driver: </span>
-        {params.driverName}
+        <span>{params.driverName}</span>
       </p>
       <p>
         <span>Passenger: </span>
