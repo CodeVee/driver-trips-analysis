@@ -46,7 +46,7 @@ const Tripspage = ({ match }) => {
       </p>
       <p>
         <span>Date: </span>
-        {lenTrip ? trip[0].created.slice(0, 10) : ''}
+        <span>{lenTrip ? trip[0].created.slice(0, 10) : ''}</span>
       </p>
     </div>
   );
