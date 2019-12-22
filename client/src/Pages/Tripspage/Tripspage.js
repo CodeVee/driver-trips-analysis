@@ -40,7 +40,9 @@ const Tripspage = ({ match }) => {
       </p>
       <p>
         <span>Payment: </span>
-        {lenTrip ? (trip[0].isCash ? 'Card Payment' : 'Cash Payment') : ''}
+        <span>
+          {lenTrip ? (trip[0].isCash ? 'Card Payment' : 'Cash Payment') : ''}
+        </span>
       </p>
       <p>
         <span>Date: </span>
