@@ -20,5 +20,6 @@
 @media only screen and (max-width: 600px) {
   .trips-table p {
     display: flex;
+    flex-direction: column;
   }
 }
