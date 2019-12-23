@@ -24,5 +24,6 @@
   }
 
   .trips-table p span {
+    padding: 2px;
   }
 }
