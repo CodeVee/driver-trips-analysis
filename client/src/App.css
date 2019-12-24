@@ -12,5 +12,5 @@ body {
 }
 .App {
   display: flex;
-  height: 100%;
+  height: fit-content;
 }
