@@ -161,4 +161,8 @@
   .drivers-page {
     flex-direction: column;
   }
+
+  .driver-display {
+    flex-direction: column;
+  }
 }
