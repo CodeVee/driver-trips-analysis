@@ -3,9 +3,10 @@ import './Driverspages.css';
 import DriverDisplay from '../../Components/DriversList/DriverDisplay';
 import DriverList from '../../Components/DriversList/DriverList';
 
-const Driverspage = ({ match: { params } }) => {
+const Driverspage = ({ match }) => {
   const [driver, setDriver] = useState('');
 
+  const { params } = match;
   useEffect(() => {
     if (params.driverID) {
       fetch(`/api/driver/${params.driverID}`)
