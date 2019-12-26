@@ -164,5 +164,6 @@
 
   .driver-display {
     flex-direction: column;
+    margin: 0 -10px;
   }
 }
