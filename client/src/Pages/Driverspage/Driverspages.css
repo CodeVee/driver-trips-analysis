@@ -160,6 +160,7 @@
 @media only screen and (max-width: 600px) {
   .drivers-page {
     flex-direction: column;
+    padding: 2px;
   }
 
   .driver-display {
