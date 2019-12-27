@@ -13,7 +13,7 @@
   height: -moz-fit-content;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   .container {
     width: 95%;
     margin: 0 auto;
