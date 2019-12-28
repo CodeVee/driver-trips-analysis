@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './Components/Header/Header';
 import './App.css';
 
 import Homepage from './Pages/Homepage/Homepage';
@@ -7,7 +8,10 @@ import Homepage from './Pages/Homepage/Homepage';
 const App = () => {
   return (
     <div className="App">
-      <Homepage />
+      <Router>
+        <Header />
+        <Homepage />
+      </Router>
     </div>
   );
 };
