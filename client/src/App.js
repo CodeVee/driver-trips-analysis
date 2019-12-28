@@ -8,10 +8,12 @@ import Homepage from './Pages/Homepage/Homepage';
 const App = () => {
   return (
     <div className="App">
-      <Router>
-        <Header />
-        <Homepage />
-      </Router>
+      <div className="container">
+        <Router>
+          <Header />
+          <Homepage />
+        </Router>
+      </div>
     </div>
   );
 };
