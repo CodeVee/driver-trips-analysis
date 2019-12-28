@@ -9,22 +9,16 @@ import Tripspage from '../Tripspage/Tripspage';
 const Homepage = () => {
   return (
     <div className="homepage">
-      <div className="container">
-        <Router>
-          <Header />
-          <Switch>
-            <Route exact path="/" component={DriverCards} />
-            <Route exact path="/drivers" component={Driverspage} />
-            <Route exact path="/drivers/:driverID" component={Driverspage} />
-            <Route exact path="/trip" component={Tripspage} />
-            <Route
-              exact
-              path="/trip/:driverName/:tripID"
-              component={Tripspage}
-            />
-          </Switch>
-        </Router>
-      </div>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={DriverCards} />
+          <Route exact path="/drivers" component={Driverspage} />
+          <Route exact path="/drivers/:driverID" component={Driverspage} />
+          <Route exact path="/trip" component={Tripspage} />
+          <Route exact path="/trip/:driverName/:tripID" component={Tripspage} />
+        </Switch>
+      </Router>
     </div>
   );
 };
