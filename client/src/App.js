@@ -11,6 +11,7 @@ const App = () => {
       <div className="container">
         <Router>
           <Header />
+          <Switch />
           <Homepage />
         </Router>
       </div>
