@@ -17,6 +17,11 @@ const App = () => {
             <Route exact path="/drivers" component={Driverspage} />
             <Route exact path="/drivers/:driverID" component={Driverspage} />
             <Route exact path="/trip" component={Tripspage} />
+            <Route
+              exact
+              path="/trip/:driverName/:tripID"
+              component={Tripspage}
+            />
           </Switch>
           <Homepage />
         </Router>
