@@ -12,7 +12,9 @@ const App = () => {
       <div className="container">
         <Router>
           <Header />
-          <Switch />
+          <Switch>
+            <Route exact path="/drivers" component={Driverspage} />
+          </Switch>
           <Homepage />
         </Router>
       </div>
