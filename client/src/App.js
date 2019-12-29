@@ -14,6 +14,7 @@ const App = () => {
           <Header />
           <Switch>
             <Route exact path="/drivers" component={Driverspage} />
+            <Route exact path="/drivers/:driverID" component={Driverspage} />
           </Switch>
           <Homepage />
         </Router>
