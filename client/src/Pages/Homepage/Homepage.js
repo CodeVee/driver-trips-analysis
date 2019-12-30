@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './Homepage.css';
 import Header from '../../Components/Header/Header';
 import DriverCards from '../../Components/DriverCards/DriverCards';
-import Driverspage from '../Driverspage/Driverspage';
 import Tripspage from '../Tripspage/Tripspage';
 
 const Homepage = () => {
