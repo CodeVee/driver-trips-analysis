@@ -12,7 +12,6 @@ const Homepage = () => {
         <Header />
         <Switch>
           <Route exact path="/" component={DriverCards} />
-          <Route exact path="/trip" component={Tripspage} />
           <Route exact path="/trip/:driverName/:tripID" component={Tripspage} />
         </Switch>
       </Router>
