@@ -14,6 +14,7 @@ const App = () => {
         <Router>
           <Header />
           <Switch>
+            <Route exact path="/" component={Homepage} />
             <Route exact path="/drivers" component={Driverspage} />
             <Route exact path="/drivers/:driverID" component={Driverspage} />
             <Route exact path="/trip" component={Tripspage} />
