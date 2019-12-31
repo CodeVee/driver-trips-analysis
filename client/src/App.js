@@ -23,7 +23,6 @@ const App = () => {
               component={Tripspage}
             />
           </Switch>
-          <Homepage />
         </Router>
       </div>
     </div>
