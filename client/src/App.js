@@ -4,7 +4,6 @@ import Header from './Components/Header/Header';
 import Driverspage from './Pages/Driverspage/Driverspage';
 import Tripspage from './Pages/Tripspage/Tripspage';
 import './App.css';
-
 import Homepage from './Pages/Homepage/Homepage';
 
 const App = () => {
