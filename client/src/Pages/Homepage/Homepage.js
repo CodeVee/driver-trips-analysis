@@ -8,7 +8,6 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <Router>
-        <Header />
         <Switch>
           <Route exact path="/" component={DriverCards} />
         </Switch>
