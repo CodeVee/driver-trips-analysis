@@ -6,9 +6,7 @@ import DriverCards from '../../Components/DriverCards/DriverCards';
 const Homepage = () => {
   return (
     <div className="homepage">
-      <Switch>
-        <Route exact path="/" component={DriverCards} />
-      </Switch>
+      <Route exact path="/" component={DriverCards} />
     </div>
   );
 };
