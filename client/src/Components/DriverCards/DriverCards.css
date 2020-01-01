@@ -199,5 +199,6 @@
 
   .single-card {
     width: 90%;
+    margin: 0 auto 30px auto;
   }
 }
