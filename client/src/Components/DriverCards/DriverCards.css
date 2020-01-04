@@ -211,5 +211,6 @@
 
   .trips-card {
     height: 500px;
+    margin: 30px auto;
   }
 }
