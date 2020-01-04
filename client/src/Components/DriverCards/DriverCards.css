@@ -206,5 +206,6 @@
     flex-direction: row;
     width: 90%;
     margin-top: 10px;
+    padding-left: 30px;
   }
 }
