@@ -218,6 +218,10 @@
     margin: 0 auto;
   }
 
+  .mixed-chart {
+    width: 90%;
+  }
+
   .desktop-chart {
     display: none;
   }
