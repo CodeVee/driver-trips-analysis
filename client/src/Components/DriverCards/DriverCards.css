@@ -69,6 +69,10 @@
   display: none;
 }
 
+.tablet-chart {
+  display: none;
+}
+
 .trips-card {
   background: white;
   height: 28%;
