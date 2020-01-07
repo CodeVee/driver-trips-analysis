@@ -45,7 +45,7 @@ const MainChart = ({ values }) => {
             width="750"
           />
           <Chart
-            className="desktop-chart"
+            className="tablet-chart"
             options={options}
             series={series}
             type="bar"
