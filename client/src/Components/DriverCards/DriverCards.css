@@ -213,6 +213,10 @@
     padding-left: 30px;
   }
 
+  .desktop-chart {
+    display: none;
+  }
+
   .trips-card {
     height: 500px;
     margin: 30px auto;
