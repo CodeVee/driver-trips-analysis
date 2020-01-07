@@ -45,6 +45,13 @@ const MainChart = ({ values }) => {
             width="750"
           />
           <Chart
+            className="desktop-chart"
+            options={options}
+            series={series}
+            type="bar"
+            width="750"
+          />
+          <Chart
             className="mobile-chart"
             options={options}
             series={series}
