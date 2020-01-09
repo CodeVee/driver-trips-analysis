@@ -43,5 +43,6 @@
   .nav .nav-links {
     width: 40%;
     font-size: 0.9rem;
+    padding: 0 15px;
   }
 }
