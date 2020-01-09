@@ -42,5 +42,6 @@
 @media only screen and (min-width: 501px) and (max-width: 800px) {
   .nav .nav-links {
     width: 40%;
+    font-size: 0.9rem;
   }
 }
