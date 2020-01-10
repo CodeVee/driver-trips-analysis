@@ -235,4 +235,8 @@
     margin: 30px auto;
     width: 90%;
   }
+
+  .trips-card table {
+    font-size: 13px;
+  }
 }
