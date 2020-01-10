@@ -239,4 +239,8 @@
   .trips-card table {
     font-size: 13px;
   }
+
+  .trips-card tbody td {
+    padding: 15px 8px;
+  }
 }
