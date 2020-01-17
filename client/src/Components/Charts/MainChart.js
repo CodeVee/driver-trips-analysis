@@ -21,7 +21,7 @@ const MainChart = ({ values }) => {
       margin: 20,
       offsetY: 20,
       style: {
-        fontSize: '15px',
+        fontSize: '14px',
       },
     },
   });
