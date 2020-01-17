@@ -19,7 +19,7 @@ const MainChart = ({ values }) => {
       text: 'Type of Payment Used',
       align: 'center',
       margin: 20,
-      offsetY: 21,
+      offsetY: 20,
       style: {
         fontSize: '15px',
       },
