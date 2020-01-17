@@ -10,7 +10,7 @@ const MainChart = ({ values }) => {
       categories: ['Cash', 'Card', 'Total'],
     },
     fill: {
-      colors: ['#094a89'],
+      colors: ['#094a88'],
     },
     dataLabels: {
       enabled: false,
