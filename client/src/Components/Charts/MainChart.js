@@ -49,7 +49,7 @@ const MainChart = ({ values }) => {
             options={options}
             series={series}
             type="bar"
-            width="480"
+            width="48"
           />
           <Chart
             className="mobile-chart"
