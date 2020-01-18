@@ -56,7 +56,7 @@ const MainChart = ({ values }) => {
             options={options}
             series={series}
             type="bar"
-            width="30"
+            width="300"
           />
         </div>
       </div>
