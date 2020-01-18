@@ -55,7 +55,7 @@ const MainChart = ({ values }) => {
             className="mobile-chart"
             options={options}
             series={series}
-            type="ba"
+            type="bar"
             width="300"
           />
         </div>
