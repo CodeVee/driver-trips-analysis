@@ -42,7 +42,7 @@ const MainChart = ({ values }) => {
             options={options}
             series={series}
             type="bar"
-            width="75"
+            width="750"
           />
           <Chart
             className="tablet-chart"
