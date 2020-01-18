@@ -41,7 +41,7 @@ const MainChart = ({ values }) => {
             className="desktop-chart"
             options={options}
             series={series}
-            type="bar"
+            type="ba"
             width="750"
           />
           <Chart
