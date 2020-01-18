@@ -35,7 +35,7 @@ const MainChart = ({ values }) => {
 
   return (
     <div className="app">
-      <div className="ro">
+      <div className="row">
         <div className="mixed-chart">
           <Chart
             className="desktop-chart"
