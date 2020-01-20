@@ -27,7 +27,7 @@ const SingleCard = ({ index, user }) => {
                 <img src={User} alt="Name" /> {name}
               </p>
               <p>
-                <img src={Cash} alt="Cash Trip" /> {cash} Cash Trips
+                <img src={Cash} alt="Cash Trip" /> {cash} Cash Trip
               </p>
               <p>
                 <img src={Card} alt="Card Trip" /> {card} Non Cash Trips
