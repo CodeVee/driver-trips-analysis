@@ -18,7 +18,7 @@ const SingleCard = ({ index, user }) => {
         <div className="card-container">
           <h3>{index === 0 ? text0 : text1}</h3>
           <div className="icon-text">
-            <div className="ico">
+            <div className="icon">
               <img src={index === 0 ? Medal : Another} alt="Prize" />
             </div>
 
