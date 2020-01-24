@@ -9,4 +9,6 @@ const TripsState = prop => {
     drivers: [],
     stats: {},
   };
+
+  const [state, dispatch] = useReducer(TripsReducer, initialState);
 };
