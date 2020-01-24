@@ -4,5 +4,9 @@ import TripsReducer from './tripsReducer';
 import { GET_TRIPS, GET_DRIVERS, GET_STATS } from '../types';
 
 const TripsState = prop => {
-  const initialState = {};
+  const initialState = {
+    trips: [],
+    drivers: [],
+    stats: {},
+  };
 };
