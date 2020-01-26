@@ -3,7 +3,7 @@ import TripsContext from './tripsContext';
 import TripsReducer from './tripsReducer';
 import { GET_TRIPS, GET_DRIVERS, GET_STATS } from '../types';
 
-const TripsState = prop => {
+const TripsState = props => {
   const initialState = {
     trips: [],
     drivers: [],
@@ -23,5 +23,18 @@ const TripsState = prop => {
     });
   };
 
-  return <TripsContext.Provider />;
+  return (
+    <TripsContext.Provider
+      value={{
+        trips: state.trips,
+        drivers: state.drivers,
+        stats: state.stats,
+        getTrips,
+      }}
+    >
+      {props.children}
+    </TripsContext.Provider>
+  );
 };
+
+export default TripsState;
