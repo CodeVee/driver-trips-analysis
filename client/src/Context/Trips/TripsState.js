@@ -1,13 +1,14 @@
 import React, { useReducer } from 'react';
 import TripsContext from './tripsContext';
 import TripsReducer from './tripsReducer';
-import { GET_TRIPS, GET_DRIVERS, GET_STATS } from '../types';
+import { GET_TRIPS, GET_DRIVERS, GET_STATS, SET_LOADING } from '../types';
 
 const TripsState = props => {
   const initialState = {
     trips: [],
     drivers: [],
     stats: {},
+    loading: false,
   };
 
   const [state, dispatch] = useReducer(TripsReducer, initialState);
@@ -23,6 +24,7 @@ const TripsState = props => {
     });
   };
 
+  const setLoading = () => dispatch({ type: SET_LOADING });
   return (
     <TripsContext.Provider
       value={{
