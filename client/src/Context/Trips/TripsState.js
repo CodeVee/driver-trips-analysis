@@ -8,12 +8,13 @@ const TripsState = props => {
     trips: [],
     drivers: [],
     stats: {},
-    loading: false,
+    loading: true,
   };
 
   const [state, dispatch] = useReducer(TripsReducer, initialState);
 
   const getTrips = async () => {
+    setLoading();
     const trips = await fetch('/api/drivers')
       .then(data => data.json())
       .then(data => data.data);
@@ -31,6 +32,7 @@ const TripsState = props => {
         trips: state.trips,
         drivers: state.drivers,
         stats: state.stats,
+        loading: state.loading,
         getTrips,
       }}
     >
