@@ -1,6 +1,14 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext, useEffect } from 'react';
+import TripsContext from '../../Context/Trips/tripsContext';
 
 const TripsCard = ({ tableRow }) => {
+  const tripsContext = useContext(TripsContext);
+
+  useEffect(() => {
+    tripsContext.getTrips();
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <Fragment>
       <section className="trips-card">
