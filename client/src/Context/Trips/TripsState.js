@@ -1,21 +1,20 @@
 import React, { useReducer } from 'react';
 import TripsContext from './tripsContext';
 import TripsReducer from './tripsReducer';
-import { GET_TRIPS, GET_DRIVERS, GET_STATS, SET_LOADING } from '../types';
+import { GET_TRIPS, GET_DRIVERS, GET_STATS } from '../types';
 
 const TripsState = props => {
   const initialState = {
     trips: [],
     drivers: [],
-    stats: {},
-    loading: true,
+    stats: [],
+    topDrivers: [],
   };
 
   const [state, dispatch] = useReducer(TripsReducer, initialState);
 
   const getTrips = async () => {
-    setLoading();
-    const trips = await fetch('/api/drivers')
+    const trips = await fetch('/api/trips')
       .then(data => data.json())
       .then(data => data.data);
 
@@ -25,15 +24,42 @@ const TripsState = props => {
     });
   };
 
-  const setLoading = () => dispatch({ type: SET_LOADING });
+  const getDrivers = async () => {
+    const drivers = await fetch('/api/drivers')
+      .then(data => data.json())
+      .then(data => data.data);
+
+    dispatch({
+      type: GET_DRIVERS,
+      payload: drivers,
+    });
+  };
+
+  const getStats = async () => {
+    const stats = await fetch('/api/stats')
+      .then(data => data.json())
+      .then(data => data.data);
+
+    const values = [
+      stats.cashBilledTotal,
+      stats.nonCashBilledTotal,
+      stats.billedTotal,
+    ];
+    dispatch({
+      type: GET_STATS,
+      payload: values,
+    });
+  };
+
   return (
     <TripsContext.Provider
       value={{
         trips: state.trips,
         drivers: state.drivers,
         stats: state.stats,
-        loading: state.loading,
         getTrips,
+        getDrivers,
+        getStats,
       }}
     >
       {props.children}
