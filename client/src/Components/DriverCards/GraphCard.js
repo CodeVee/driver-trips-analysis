@@ -1,25 +1,17 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useEffect, useContext } from 'react';
 import MainChart from '../Charts/MainChart';
+import TripsContext from '../../Context/Trips/tripsContext';
 
 const GraphCard = () => {
-  const [stats, setStats] = useState({});
+  const tripsContext = useContext(TripsContext);
 
   useEffect(() => {
-    fetch('/api/stats')
-      .then(data => {
-        return data.json();
-      })
-      .then(data => {
-        setStats(data.data);
-      });
+    tripsContext.getStats();
+    // eslint-disable-next-line
   }, []);
 
-  const length = Object.keys(stats).length;
-  const values =
-    length !== 0
-      ? [stats.cashBilledTotal, stats.nonCashBilledTotal, stats.billedTotal]
-      : [];
-
+  const length = tripsContext.stats.length;
+  const values = tripsContext.stats;
   return (
     <Fragment>
       <section className="graph-card">
