@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from 'react';
 import './DriverCards.css';
 import TopCards from './TopCards';
 import GraphCard from './GraphCard';
 import TripsCard from './TripsCard';
+import TripsContext from '../../Context/Trips/tripsContext';
 
 const DriverCards = () => {
-  const [trips, setTrips] = useState([]);
+  // const [trips, setTrips] = useState([]);
   const [drivers, setDrivers] = useState([]);
-
+  let trips = [];
+  const tripsContext = useContext(TripsContext);
   useEffect(() => {
     fetch('/api/drivers')
       .then(data => {
@@ -20,15 +21,10 @@ const DriverCards = () => {
   }, []);
 
   useEffect(() => {
-    fetch('api/trips')
-      .then(data => {
-        return data.json();
-      })
-      .then(data => {
-        setTrips(data.data);
-      });
+    tripsContext.getTrips();
+    // eslint-disable-next-line
   }, []);
-
+  trips = tripsContext.trips;
   const cleaner = amount => {
     if (typeof amount == 'string') {
       amount = Number(amount.replace(',', ''));
@@ -101,35 +97,15 @@ const DriverCards = () => {
     return obj;
   });
 
-  const tripDetails = trips.map((trip, index) => {
-    const form = {};
-    try {
-      form.driver = driverNames[trip.driverID].name;
-      form.passenger = trip.user.name;
-      form.amount = trip.billedAmount;
-    } catch {
-      form.driver = 'Unknown Driver';
-      form.passenger = trip.user.name;
-      form.amount = trip.billedAmount;
-    }
-    return (
-      <tr key={index}>
-        <td>{index + 1}</td>
-        <td>{form.driver}</td>
-        <td>{form.passenger}</td>
-        <td>{form.amount}</td>
-        <td>
-          {<Link to={`/trip/${form.driver}/${trip.tripID}`}> Details</Link>}
-        </td>
-      </tr>
-    );
-  });
-
   return (
     <main className="main-cards">
-      <TopCards details={topDriversDetails} />
-      <GraphCard />
-      <TripsCard tableRow={tripDetails} />
+      {trips.length && (
+        <>
+          <TopCards details={topDriversDetails} />
+          <GraphCard />
+          <TripsCard />
+        </>
+      )}
     </main>
   );
 };
