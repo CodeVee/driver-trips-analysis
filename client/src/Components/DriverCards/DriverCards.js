@@ -6,16 +6,10 @@ import TripsCard from './TripsCard';
 import TripsContext from '../../Context/Trips/tripsContext';
 
 const DriverCards = () => {
-  const [drivers, setDrivers] = useState([]);
+  // const [drivers, setDrivers] = useState([]);
   const tripsContext = useContext(TripsContext);
   useEffect(() => {
-    fetch('/api/drivers')
-      .then(data => {
-        return data.json();
-      })
-      .then(data => {
-        setDrivers(data.data);
-      });
+    tripsContext.getDrivers();
   }, []);
 
   useEffect(() => {
@@ -23,6 +17,7 @@ const DriverCards = () => {
     // eslint-disable-next-line
   }, []);
   const trips = tripsContext.trips;
+  const drivers = tripsContext.drivers;
   const cleaner = amount => {
     if (typeof amount == 'string') {
       amount = Number(amount.replace(',', ''));
