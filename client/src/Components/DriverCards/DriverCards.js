@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import './DriverCards.css';
 import TopCards from './TopCards';
 import GraphCard from './GraphCard';
@@ -6,18 +6,21 @@ import TripsCard from './TripsCard';
 import TripsContext from '../../Context/Trips/tripsContext';
 
 const DriverCards = () => {
-  // const [drivers, setDrivers] = useState([]);
   const tripsContext = useContext(TripsContext);
+
   useEffect(() => {
     tripsContext.getDrivers();
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     tripsContext.getTrips();
     // eslint-disable-next-line
   }, []);
+
   const trips = tripsContext.trips;
   const drivers = tripsContext.drivers;
+
   const cleaner = amount => {
     if (typeof amount == 'string') {
       amount = Number(amount.replace(',', ''));
