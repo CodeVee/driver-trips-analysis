@@ -2,7 +2,7 @@ import React, { Fragment, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import TripsContext from '../../Context/Trips/tripsContext';
 
-const TripsCard = ({ tableRow }) => {
+const TripsCard = () => {
   const tripsContext = useContext(TripsContext);
   useEffect(() => {
     tripsContext.getTrips();
