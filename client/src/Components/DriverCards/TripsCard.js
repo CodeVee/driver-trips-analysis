@@ -6,6 +6,10 @@ const TripsCard = () => {
   const tripsContext = useContext(TripsContext);
   useEffect(() => {
     tripsContext.getTrips();
+    // eslint-disable-next-line
+  }, []);
+
+  useEffect(() => {
     tripsContext.getDrivers();
     // eslint-disable-next-line
   }, []);
