@@ -14,7 +14,7 @@ coverage
 client/coverage
 
 # production
-# client/build
+client/build
 
 # misc
 .DS_Store
@@ -35,3 +35,7 @@ client/coverage
 client/npm-debug.log*
 client/yarn-debug.log*
 client/yarn-error.log*
+
+# lockfile (npm used, lockfile generation disabled via .npmrc)
+client/package-lock.json
+client/yarn.lock

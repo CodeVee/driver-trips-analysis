@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Driverspage from './Pages/Driverspage/Driverspage';
 import Tripspage from './Pages/Tripspage/Tripspage';
@@ -14,17 +14,13 @@ const App = () => {
         <TripsState>
           <Router>
             <Header />
-            <Switch>
-              <Route exact path="/" component={Homepage} />
-              <Route exact path="/drivers" component={Driverspage} />
-              <Route exact path="/drivers/:driverID" component={Driverspage} />
-              <Route exact path="/trip" component={Tripspage} />
-              <Route
-                exact
-                path="/trip/:driverName/:tripID"
-                component={Tripspage}
-              />
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Homepage />} />
+              <Route path="/drivers/:driverID" element={<Driverspage />} />
+              <Route path="/drivers" element={<Driverspage />} />
+              <Route path="/trip/:driverName/:tripID" element={<Tripspage />} />
+              <Route path="/trip" element={<Tripspage />} />
+            </Routes>
           </Router>
         </TripsState>
       </div>

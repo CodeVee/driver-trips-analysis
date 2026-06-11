@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './Driverspages.css';
 import DriverDisplay from '../../Components/DriversList/DriverDisplay';
 import DriverList from '../../Components/DriversList/DriverList';
 
-const Driverspage = ({ match }) => {
+const Driverspage = () => {
   const [driver, setDriver] = useState('');
+  const params = useParams();
 
-  const { params } = match;
   useEffect(() => {
     if (params.driverID) {
       fetch(`/api/driver/${params.driverID}`)
-        .then(data => data.json())
-        .then(data => setDriver(data.data));
+        .then((data) => data.json())
+        .then((data) => setDriver(data.data));
     }
   }, [params]);
 

@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './Tripspage.css';
 
-const Tripspage = ({ match }) => {
+const Tripspage = () => {
   const [trip, setTrip] = useState([]);
+  const params = useParams();
 
-  const { params } = match;
   useEffect(() => {
     if (params.tripID) {
       fetch(`/api/trip/${params.tripID}`)
-        .then(data => data.json())
-        .then(data => setTrip(data.data));
+        .then((data) => data.json())
+        .then((data) => setTrip(data.data));
     }
   }, [params]);
 
